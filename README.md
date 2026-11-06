@@ -6,7 +6,7 @@
 >
 > **Current patch (`2.0.6+perf.1`, Minecraft 26.3, Fabric):** the biome-timeline mixin on `EnvironmentAttributeSystem$ValueSampler` rebuilt two stream pipelines and two lists on every environment attribute lookup. That showed up as ~2.5% of the server thread in a spark profile, mostly during mob spawning. The layer split is now computed once per sampler and reused. Behaviour is otherwise unchanged. The change is on the [`perf/skip-timeline-layers`](https://github.com/ripSquid/lithostitched/tree/perf/skip-timeline-layers) branch and downloads are under [Releases](https://github.com/ripSquid/lithostitched/releases).
 >
-> **Issues with this fork's builds go here, not to upstream.** The plan is to offer the change upstream as a pull request; if it is merged there, this fork's build becomes unnecessary.
+> **Please don't report problems with this fork's builds to upstream** (GitHub Issues are disabled on this fork; contact its maintainer instead). The plan is to offer the change upstream as a pull request; if it is merged there, this fork's build becomes unnecessary.
 >
 > **AI disclosure:** the patch was written with AI assistance (Claude) and reviewed by a human. Everything else is upstream's code.
 >
